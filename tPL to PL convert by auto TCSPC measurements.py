@@ -9,11 +9,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load the x values from the first file
-x_data = np.loadtxt("wavelength1.txt")
+filename1 = r'E:\tpl\Yiteng\2023\4\npl ase lense focaus\11mw\wavelength1.txt'
+x_data = np.loadtxt(filename1)
 wavelength = x_data[:,0]
 
 # Load the y values from the second file
-y_data = np.loadtxt("tpl data.txt")
+filename2 = r'E:\tpl\Yiteng\2023\4\npl ase lense focaus\11mw\tpl data.txt'
+y_data = np.loadtxt(filename2)
 time = y_data[:,0]
 counts = y_data[:,1]
 
