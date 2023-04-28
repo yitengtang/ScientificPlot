@@ -43,4 +43,4 @@ fig = go.Figure(data=[trace_data, trace_fit], layout=layout)
 
 # show the figure
 fig.show(renderer='browser')
-fig.show()
+
