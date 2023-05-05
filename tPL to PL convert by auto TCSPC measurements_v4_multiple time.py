@@ -36,14 +36,17 @@ intensity3 = counts[mask3]
 intensity4 = counts[mask4]
 
 # Plot all the intensity values in a single graph
-plt.plot(wavelength, intensity1, label='162.018070')
-plt.plot(wavelength, intensity2, label='166.927708')
-plt.plot(wavelength, intensity3, label='171.837347')
-plt.plot(wavelength, intensity4, label='176.746985')
+plt.plot(wavelength, intensity1, label='162.018070', linewidth =3)
+plt.plot(wavelength, intensity2, label='166.927708', linewidth =3)
+plt.plot(wavelength, intensity3, label='171.837347', linewidth =3)
+plt.plot(wavelength, intensity4, label='176.746985', linewidth =3)
 
 # Set the x and y labels
-plt.xlabel("Wavelength")
-plt.ylabel("Intensity")
+plt.xlabel("Wavelength", fontsize =16)
+plt.ylabel("Intensity", fontsize =16)
+
+# Set the tick labels to be inside the plot
+plt.tick_params(axis='both', direction='in', labelsize = 16)
 
 # Set the legend
 plt.legend()
