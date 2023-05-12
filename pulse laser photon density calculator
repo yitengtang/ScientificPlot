@@ -1,0 +1,140 @@
+import math
+
+def calculate_pulse_laser_density(frequency, wavelength, laser_power, beam_size):
+    # Convert wavelength from nm to meters
+    wavelength_m = wavelength *1e-9
+
+    # Calculate the pulse energy
+    pulse_energy = laser_power / frequency
+    print('Pulse energy: ', pulse_energy)
+
+    # Calculate the beam area
+    beam_area = math.pi * (beam_size / 2) ** 2
+    print('beam area: ', beam_area)
+
+    # Calculate the pulse laser density
+    pulse_density = pulse_energy / (beam_area * wavelength_m)
+    print('pulse_density: ', pulse_density)
+
+    return pulse_density
+
+# Input parameters
+frequency = 200e3  # 200 kHz
+wavelength = 532  # 532 nm
+laser_power = 0.2e-3  # 0.2 mW
+beam_size = 1.4e-3  # 1.4 mm
+
+# Calculate pulse laser density
+density = calculate_pulse_laser_density(frequency, wavelength, laser_power, beam_size)
+
+# Print the result
+print("Pulse laser density: {:.2e} J/m^2".format(density))
+
+
+import math
+
+def calculate_pulse_laser_photons(frequency, wavelength, laser_power, beam_size):
+    # Convert wavelength from nm to meters
+    wavelength_m = wavelength *1e-9
+
+    # Calculate the pulse energy
+    pulse_energy = laser_power / frequency
+    print('Pulse energy: ', pulse_energy)
+    # Calculate the beam area
+    beam_area = math.pi * (beam_size / 2) ** 2
+    print('beam area: ', beam_area)
+
+    # Calculate the number of photons
+    plank_constant = 6.62607015e-34  # Planck's constant (J s)
+    speed_of_light = 299792458  # Speed of light (m/s)
+    num_photons = pulse_energy / ((plank_constant * speed_of_light) / wavelength_m)
+    print('number of photons: ',num_photons)
+    print('photon energy: ',((plank_constant * speed_of_light) / wavelength_m))
+
+    return num_photons
+
+# Input parameters
+frequency = 200e3  # 200 kHz
+wavelength = 532  # 532 nm
+laser_power = 0.2e-3  # 0.2 mW
+beam_size = 1.4e-3  # 1.4 mm
+
+# Calculate pulse laser photon count
+photon_count = calculate_pulse_laser_photons(frequency, wavelength, laser_power, beam_size)
+
+# Print the result
+print("Pulse laser photon count: {:.2e} photons".format(photon_count))
+
+
+import math
+
+def calculate_pulse_laser_photon_density(frequency, wavelength, laser_power, beam_size):
+    # Convert wavelength from nm to meters
+    wavelength_m = wavelength
+
+    # Calculate the pulse energy
+    pulse_energy = laser_power / frequency
+
+    # Calculate the beam area in square meters
+    beam_area = math.pi * (beam_size / 2) ** 2
+
+    # Calculate the number of photons
+    plank_constant = 6.62607015e-34  # Planck's constant (J s)
+    speed_of_light = 299792458  # Speed of light (m/s)
+    num_photons = pulse_energy / ((plank_constant * speed_of_light) / wavelength_m)
+
+    # Calculate photon density per square nanometer
+    photon_density = num_photons / (beam_area * 1e18)
+
+    return photon_density
+
+# Input parameters
+frequency = 200e3  # 200 kHz
+wavelength = 532e-9  # 532 nm
+laser_power = 0.2e-3  # 0.2 mW
+beam_size = 1.4e-3  # 1.4 mm
+
+# Calculate pulse laser photon density
+photon_density = calculate_pulse_laser_photon_density(frequency, wavelength, laser_power, beam_size)
+
+# Print the result
+print("Pulse laser photon density: {:.2e} photons/nm^2".format(photon_density))
+
+
+import math
+
+def calculate_pulse_laser_photon_density(frequency, wavelength, laser_power, beam_size):
+    # Convert wavelength from nm to meters
+    wavelength_m = wavelength 
+
+    # Calculate the pulse energy
+    pulse_energy = laser_power / frequency
+    print('pulse energy:',pulse_energy)
+
+    # Calculate the beam area in square meters
+    beam_area = math.pi * (beam_size / 2) ** 2
+    print('beam area:',beam_area)
+
+    # Calculate the number of photons
+    plank_constant = 6.62607015e-34  # Planck's constant (J s)
+    speed_of_light = 299792458  # Speed of light (m/s)
+    num_photons = pulse_energy / ((plank_constant * speed_of_light) / wavelength_m)
+    print('photon energy:',((plank_constant * speed_of_light) / wavelength_m) )
+    print('number of photons: ', num_photons)
+
+    # Calculate photon density per square centimeter
+    photon_density = num_photons / (beam_area * 1e4)
+
+    return photon_density
+
+# Input parameters
+frequency = 200e3  # 200 kHz
+wavelength = 532e-9  # 532 nm
+laser_power = 0.2e-3  # 0.2 mW
+beam_size = 1.4e-3  # 1.4 mm
+
+# Calculate pulse laser photon density
+photon_density = calculate_pulse_laser_photon_density(frequency, wavelength, laser_power, beam_size)
+
+# Print the result
+print("Pulse laser photon density: {:.2e} photons/cm^2".format(photon_density))
